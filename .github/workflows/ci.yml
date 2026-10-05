@@ -2,9 +2,9 @@ name: CI - Train and Save the model
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   matrix-pip:
