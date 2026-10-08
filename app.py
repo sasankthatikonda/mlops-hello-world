@@ -16,6 +16,16 @@ if not MODEL_PATH.exists():
 
 model = joblib.load(MODEL_PATH)
 
+
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "message": "Welcome to Hello World MLOps API",
+        "project": "Iris Prediction",
+        "status": "running"
+    })
+
+
 @app.route("/health", methods=["GET"])
 def health():
     return jsonify({"status": "ok"})
